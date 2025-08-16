@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/header') %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Error</title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body style="background-image: url('https://raw.githubusercontent.com/Unonkgw/my-images/c6d40969dd0f26a35a36ace6a61dca87c687533b/orangebeam2.svg');"></body>
+
+  <main class="container text-center my-5">
+  <img src="https://raw.githubusercontent.com/Unonkgw/my-images/main/404.png" 
+       alt="404 Error" 
+       class="img-fluid mb-4 error-image">
+
+  <h1><%= errorMsg %></h1>
+  <p class="return-msg">Please check the URL or go back to the <a href="/" class="return-msg" style="text-decoration-line: underline;">home page</a>.</p>
+</main>
+
+  <%- include('../partials/footer') %>
+
+</body>
+</html>

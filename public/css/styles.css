@@ -1,0 +1,74 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+}
+
+main {
+  flex: 1;
+}
+
+:root {
+  --primary: #d85c0c;  
+  --secondary: #f4f3ee; 
+  --accent: #F08B51;    
+}
+
+
+.navbar .nav-link {
+  color: #f1f6f3 !important;
+  font-weight: 500;
+  transition: all 0.3s ease;
+  padding: 8px 16px;
+  border-radius: 6px;
+}
+
+
+.navbar .nav-link:hover {
+  background-color: #d85c0c;
+  color: white !important;
+}
+
+.navbar-nav .nav-item {
+  margin: 0 10px;
+}
+
+.navbar-nav .nav-link {
+  padding: 10px 15px; 
+}
+
+.company-title {
+  font-size: 2.5rem;
+  font-weight: bold;
+  color: #FF7518; 
+  margin-bottom: 1rem;
+}
+
+.company-tagline {
+  font-size: 1.50rem;
+  font-style: italic;
+  color: #FFE5B4; 
+  margin-bottom: 1rem;
+}
+
+.company-mission, .return-msg {
+  font-size: 1.1rem;
+  color: #FFE5B4; 
+  max-width: 700px;
+  margin: 0 auto;
+  line-height: 1.6;
+}
+
+main {
+  padding: 2rem;
+}
+
+.error-image {
+  max-width: 400px;
+  height: auto;
+  margin: 0 auto;
+  display: block;
+}
+
+

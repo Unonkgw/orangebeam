@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <%- include('../partials/header') %>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Home - <%= company.name %></title>
+
+  <link rel="stylesheet" href="/css/styles.css">
+</head>
+<body style="background-image: url('https://images4.alphacoders.com/743/743533.jpg');" background-color="#f4f3ee"></body>
+    
+    <main class="container my-4 text-center">
+        <h1 class="company-title">Welcome to <%= company.name %>.</h1>
+        <p class="company-tagline"><%= company.tagline %></p>
+        <p class="company-mission"><%= company.mission %></p>
+
+    </main>
+
+  <%- include('../partials/footer') %>
+
+</body>
+</html>
