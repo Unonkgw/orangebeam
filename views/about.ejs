@@ -4,18 +4,49 @@
   <%- include('../partials/header') %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>About Us</title>
 
   <link rel="stylesheet" href="/css/styles.css">
 </head>
 <body style="background-image: url('https://raw.githubusercontent.com/Unonkgw/my-images/c6d40969dd0f26a35a36ace6a61dca87c687533b/orangebeam2.svg');">
     
-  <main class="container my-4 ">
-    <h1>Welcome to OrangeBeam Construction</h1> <!-- PLACEHOLDER ONLY-->
-    <p>Building strong foundations for the future.</p> <!-- PLACEHOLDER ONLY-->
+  <main class="container my-4">
+    <h1>About <%= company.name %></h1>
+    <p>
+      At <strong><%= company.name %></strong>, we are dedicated to delivering reliable, 
+      innovative, and sustainable engineering solutions. With years of expertise 
+      in the field, our mission is to build projects that stand the test of time 
+      while meeting the highest standards of quality and safety.
+    </p>
+    <p>
+      Our team is composed of passionate engineers, architects, and project 
+      managers who work together to turn visions into reality. We specialize in 
+      infrastructure development, residential and commercial projects, and 
+      cutting-edge construction technologies. 
+    </p>
+    <p>
+      At the heart of <%= company.name %> is a commitment to excellence, integrity, 
+      and building strong foundations for the future.
+    </p>
+
+    <!-- team section -->
+<section class="team my-5 text-center">
+  <h2>Meet Our Team</h2>
+  <div class="row mt-4">
+    <% for (let i = 0; i < team.length; i++) { %>
+      <div class="col-md-4 mb-4">
+        <div class="card shadow-sm h-100">
+          <div class="card-body">
+            <h5 class="card-title"><%= team[i].name %></h5>
+            <p class="card-text"><%= team[i].engr %></p>
+          </div>
+        </div>
+      </div>
+    <% } %>
+  </div>
+</section>
   </main>
 
   <%- include('../partials/footer') %>
-
 </body>
 </html>
