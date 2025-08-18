@@ -4,18 +4,76 @@
   <%- include('../partials/header') %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Contact Us</title>
 
+  <!-- bootstrap css -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
   <link rel="stylesheet" href="/css/styles.css">
 </head>
-<body style="background-image: url('https://raw.githubusercontent.com/Unonkgw/my-images/c6d40969dd0f26a35a36ace6a61dca87c687533b/orangebeam2.svg');"></body>
+<body style="background-image: url('https://raw.githubusercontent.com/Unonkgw/my-images/c6d40969dd0f26a35a36ace6a61dca87c687533b/orangebeam2.svg'); background-size: cover; background-attachment: fixed;">
+
+  <main class="container py-5">
     
-  <main class="container my-4">
-    <h1>Welcome to OrangeBeam Construction</h1> <!-- PLACEHOLDER ONLY-->
-    <p>Building strong foundations for the future.</p> <!-- PLACEHOLDER ONLY-->
+    <div class="text-center mb-5">
+      <h1 class="fw-bold">Contact Us</h1>
+      <p class="lead">If you have questions or would like to learn more about <%= company.name %>, feel free to reach out!</p>
+    </div>
+
+    
+    <div class="row justify-content-center mb-5">
+      <div class="col-md-8">
+        <div class="d-flex justify-content-around text-center rounded shadow-sm p-3" style="background-color: #f3f7f3;">
+          <div>
+            <i class="bi bi-geo-alt-fill icon-custom fs-4 "></i>
+            <p class="mb-0 small dark-text"><strong>Address:</strong><br><%= company.address %></p>
+          </div>
+          <div>
+            <i class="bi bi-telephone-fill icon-custom fs-4"></i>
+            <p class="mb-0 small dark-text"><strong>Phone:</strong><br><%= company.phone %></p>
+          </div>
+          <div>
+            <i class="bi bi-envelope-fill icon-custom fs-4"></i>
+            <p class="mb-0 small dark-text"><strong>Email:</strong><br><a href="mailto:<%= company.email %>" class="mb-0 small text-dark"><%= company.email %></a></p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- contact form -->
+    <div class="row justify-content-center">
+      <div class="col-md-8">
+        <div class="card shadow-lg border-0" style="background-color: #f3f7f3;">
+          <div class="card-body p-4">
+            <h2 class="h4 text-center mb-4 dark-text">Send us a Message</h2>
+            <form action="/send-message" method="POST">
+              <div class="mb-3">
+                <label for="name" class="form-label dark-text">Your Name</label>
+                <input type="text" id="name" name="name" class="form-control" placeholder="Enter your full name" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="email" class="form-label dark-text">Your Email</label>
+                <input type="email" id="email" name="email" class="form-control" placeholder="Enter your email address" required>
+              </div>
+
+              <div class="mb-3">
+                <label for="message" class="form-label dark-text">Message</label>
+                <textarea id="message" name="message" rows="4" class="form-control" placeholder="Write your message here..." required></textarea>
+              </div>
+
+              <div class="d-grid button-custom">
+                <button type="submit" class="btn btn-primary btn-lg button-custom">Submit</button>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
   </main>
 
+  <!-- boostrap js and icons -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
   <%- include('../partials/footer') %>
-
 </body>
 </html>
