@@ -64,6 +64,22 @@ main {
   padding: 2rem;
 }
 
+.outlined-text {
+  text-shadow: 
+    0.3px 0.3px 0 rgb(199, 81, 12), 
+   -0.3px 0.3px 0 rgb(199, 81, 12), 
+    0.3px -0.3px 0 rgb(199, 81, 12), 
+   -0.3px -0.3px 0 rgb(199, 81, 12); 
+}
+
+.outlined-text-2 {
+  text-shadow: 
+    0.3px 0.3px 0 rgb(54, 56, 55), 
+   -0.3px 0.3px 0 rgb(54, 56, 55), 
+    0.3px -0.3px 0 rgb(54, 56, 55), 
+   -0.3px -0.3px 0 rgb(54, 56, 55); 
+}
+
 .error-image {
   max-width: 400px;
   height: auto;
