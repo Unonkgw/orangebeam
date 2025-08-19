@@ -4,18 +4,72 @@
   <%- include('../partials/header') %>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home</title>
+  <title>Services</title>
+<link rel="stylesheet" href="/css/styles.css">
+<body style="background-image: url('https://raw.githubusercontent.com/Unonkgw/my-images/c6d40969dd0f26a35a36ace6a61dca87c687533b/orangebeam2.svg'); background-size: cover; background-attachment: fixed;">
 
-  <link rel="stylesheet" href="/css/styles.css">
-</head>
-<body style="background-image: url('https://raw.githubusercontent.com/Unonkgw/my-images/c6d40969dd0f26a35a36ace6a61dca87c687533b/orangebeam2.svg');"></body>
-    
-  <main class="container my-4">
-    <h1>Welcome to OrangeBeam Construction</h1> <!-- PLACEHOLDER ONLY-->
-    <p>Building strong foundations for the future.</p> <!-- PLACEHOLDER ONLY-->
-  </main>
+<!-- services -->
+<section class="services-section">
+  <div class="container text-center">
+    <h2 class="section-title" style="color: #f1f6f3">What We Do</h2>
+    <p class="section-subtitle" style="color: #FFE5B4">From concept to completion, we deliver excellence.</p>
+    <div class="service-grid">
+      <% services.forEach(service => { %>
+        <div class="service-card">
+          <div class="service-header">
+            <div class="service-icon"><%= service.icon %></div>
+            <h3 style="color:#f1f6f3";><%= service.title %></h3>
+          </div>
+          <div class="service-body">
+            <p><%= service.desc %></p>
+          </div>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
 
-  <%- include('../partials/footer') %>
+<!-- specialties -->
+<section class="specialty-section">
+  <div class="container text-center">
+    <h2 class="section-title" style="color: #f1f6f3">Our Specialties</h2>
+    <div class="specialty-grid">
+      <% specialties.forEach(specialty => { %>
+        <div class="specialty-card">
+          <div class="specialty-icon"><%= specialty.icon %></div>
+          <h4><%= specialty.title %></h4>
+          <p style="color: #FFE5B4"><%= specialty.desc %></p>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<!-- process -->
+<section class="process-section">
+  <div class="container text-center">
+    <h2 class="section-title" style="color: #f1f6f3">Our Construction Process</h2>
+    <div class="process-grid">
+      <% processSteps.forEach((step, index) => { %>
+        <div class="process-step">
+          <div class="step-number dark-text"><%= index + 1 %></div>
+          <h4><%= step %></h4>
+        </div>
+      <% }) %>
+    </div>
+  </div>
+</section>
+
+<!-- call to action -->
+<section class="cta-section" style="border-radius: 20px">
+  <div class="container border-custom">
+    <h2>Ready to Start Your Project?</h2>
+    <p>Let's bring your construction vision to life. Contact us today for a free consultation.</p>
+    <a href="/contact" class="cta-button">Get Free Quote</a>
+  </div>
+</section>
+
+<%- include('../partials/footer') %>
 
 </body>
 </html>
