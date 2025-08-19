@@ -91,7 +91,11 @@ h1 {
 .button-custom {
   background-color: #FF7518;
   border: #FF7518;
-  border-radius: 6px;
+  border-radius: 10px;
+}
+
+.border-custom {
+  border-radius: 15px;
 }
 
 .button-custom:hover {
